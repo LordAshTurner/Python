@@ -1,17 +1,17 @@
-    I found an identifier variable in the df_ords dataframe that doesn’t need to be included in the analysis as a numeric variable and changed it to a suitable format.
+# I found an identifier variable in the df_ords dataframe that doesn’t need to be included in the analysis as a numeric variable and changed it to a suitable format.
 df_ords['days_since_prior_order'].value_counts(dropna = False)
 
-    I took a variable in the df_ords dataframe with an unintuitive name and changed its name without overwriting the dataframe. 
+# I took a variable in the df_ords dataframe with an unintuitive name and changed its name without overwriting the dataframe. 
 df_ords.rename(columns = {'order_dow':'orders_day_of_week'},inplace = True)
  df_ords.head()
 
-    # I used location method to subset my price ranges for my future results.  Look in my ReadMe for insight on my Python skills.  
+# I used location method to subset my price ranges for my future results.  Look in my ReadMe for insight on my Python skills.  
 df.loc[df['prices'] > 15, 'price_range_loc'] = 'High-range product'
 df.loc[(df['prices'] <= 15) & (df['prices'] > 5), 'price_range_loc'] = 'Mid-range product'
 df.loc[df['prices'] <= 5, 'price_range_loc'] = 'Low-range product'
 df['price_range_loc'].value_counts(dropna = False)
 
-    # Create for-loop statement for a new column called “busiest_period_of_day” busiest_period_of_day = []
+# Create for-loop statement for a new column called “busiest_period_of_day” busiest_period_of_day = []
 
 for value in ords_prods_merge["order_hour_of_day"]:
   if value in [10, 11, 14, 15, 13, 12, 16, 9]:
