@@ -5,4 +5,19 @@ df_ords['days_since_prior_order'].value_counts(dropna = False)
 df_ords.rename(columns = {'order_dow':'orders_day_of_week'},inplace = True)
  df_ords.head()
 
-    I used location method to subset my price ranges for my future results.  Look in my ReadMe for insight on my Python skills.  
+    # I used location method to subset my price ranges for my future results.  Look in my ReadMe for insight on my Python skills.  
+df.loc[df['prices'] > 15, 'price_range_loc'] = 'High-range product'
+df.loc[(df['prices'] <= 15) & (df['prices'] > 5), 'price_range_loc'] = 'Mid-range product'
+df.loc[df['prices'] <= 5, 'price_range_loc'] = 'Low-range product'
+df['price_range_loc'].value_counts(dropna = False)
+
+    # Create for-loop statement for a new column called “busiest_period_of_day” busiest_period_of_day = []
+
+for value in ords_prods_merge["order_hour_of_day"]:
+  if value in [10, 11, 14, 15, 13, 12, 16, 9]:
+    busiest_period_of_day.append("Most Orders")
+  elif value in [17, 8, 18, 19, 20, 7 ,21, 22]:
+    busiest_period_of_day.append("Average Orders")
+  else:
+    busiest_period_of_day.append("Fewest Orders")
+
