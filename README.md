@@ -25,8 +25,9 @@ product orders.
 ## Tools
 The following are some libraries I used for this project:
 - Pandas- for the data analyis
-- Seaborn- for visualizations 
-## **For Python I filtered, cleaned/removed duplicates, data wrangling, aggregation and grouping subset data to look at the patterns and facts within Instacart Grocery Basket, and was able to answer questions some of the following questions.**
+- Seaborn- for visualizations
+
+**For Python I filtered, cleaned/removed duplicates, data wrangling, aggregation and grouping subset data to look at the patterns and facts within Instacart Grocery Basket, and was able to answer questions some of the following questions.**
 
 ![image](https://github.com/LordAshTurner/Python/assets/159558850/10a436e5-2cf2-421e-941f-d4504ee9b3ee)
 ![image](https://github.com/LordAshTurner/Python/assets/159558850/451dfb5f-8d2d-487a-8bd1-4d6fa31337dd)
